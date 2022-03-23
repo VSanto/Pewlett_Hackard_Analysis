@@ -106,8 +106,3 @@ ORDER BY de.dept_no;
 
 -- Check the table
 SELECT * FROM retirement_by_dept;
-
--- Employee info
-SELECT * FROM salaries
-ORDER BY to_date DESC;
-
