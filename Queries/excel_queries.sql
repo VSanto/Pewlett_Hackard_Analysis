@@ -76,6 +76,7 @@ FROM retirement_info as ri
 LEFT JOIN dept_emp as de
 ON ri.emp_no = de.emp_no;
 
+-- Joining current_emp and dept_emp tables
 SELECT ri.emp_no,
     ri.first_name,
     ri.last_name,
@@ -86,7 +87,6 @@ LEFT JOIN dept_emp as de
 ON ri.emp_no = de.emp_no
 WHERE de.to_date = ('9999-01-01');
 
--- Joining current_emp and dept_emp tables
 -- Employee count by department number
 SELECT COUNT(ce.emp_no), de.dept_no
 FROM current_emp as ce
@@ -111,3 +111,28 @@ SELECT * FROM retirement_by_dept;
 SELECT * FROM salaries
 ORDER BY to_date DESC;
 
+SELECT emp_no, first_name, last_name
+INTO retirement_info
+FROM employees
+WHERE (birth_date BETWEEN '1952-01-01' AND '1955-12-31')
+AND (hire_date BETWEEN '1985-01-01' AND '1988-12-31');
+SELECT emp_no,
+    first_name,
+last_name,
+    gender
+INTO emp_info
+FROM employees
+WHERE (birth_date BETWEEN '1952-01-01' AND '1955-12-31')
+AND (hire_date BETWEEN '1985-01-01' AND '1988-12-31');
+
+SELECT e.emp_no,
+    e.first_name,
+e.last_name,
+    e.gender,
+    s.salary,
+    de.to_date
+    
+INTO emp_info
+FROM employees as e
+INNER JOIN salaries as s
+ON (e.emp_no = s.emp_no)
