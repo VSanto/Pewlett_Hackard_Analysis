@@ -24,6 +24,6 @@ Finally, I created a table providing the total number retiring by title.
 
 ![Retiring_Titles](https://user-images.githubusercontent.com/92495807/169432570-4ce87ea2-0447-42fe-9907-7e4e4b2fd190.PNG)
 
-# In Comclusion
+# In Conclusion
 The information provided will assist the company in knowing how many employees will be retiring.  When the employees will be eligible for retirement.  Current employees eligible for a mentorship.  The data will also, assist in knowing which positions will be opening up.  The company can put a plan in place to plan retirement parties, eligible promotions and new hire options.
 
